@@ -1,0 +1,7 @@
+.list, .item{
+    background-color: #ffffff;
+}
+
+input.input-box, textarea{
+    background-color: #b3b3b3;
+}

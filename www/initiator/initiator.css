@@ -1,0 +1,9 @@
+.padding{
+    background-color: #CF000F;
+    background-image: url("/img/background400x800white.png");
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}

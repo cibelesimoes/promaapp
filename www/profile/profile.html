@@ -1,0 +1,34 @@
+﻿<ion-side-menus enable-menu-with-back-views="false">
+     <link href="profile/profile.css" rel="stylesheet">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <!--<ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-options" menu-toggle="right" ng-click="Ordena()"></button>
+            </ion-nav-buttons>-->
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu"></ion-nav-view>
+
+        <div id="newpostbutton" class="btn-circle">
+            <a ui-sref="menu.newpost"> <i class="icon ion-plus-round"></i></a>
+        </div>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+        <ion-header-bar class="bar-positive">
+            <div id="proma-logo-side"></div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header" scroll="false">
+            <!--<ion-list>-->
+            <ul class="list">
+                <a class="item" ui-sref="menu.home" menu-close=""><i class="icon ion-home"></i> Posts</a>
+                <a class="item" href="https://goo.gl/forms/l7w7fns5HvXHnXxX2" menu-close=""><i class="icon ion-ios-heart"></i> Nos Avalie</a>
+                <a class="item" ng-click="Mensagem()" menu-close=""><i class="icon ion-ios-help" ></i> Sobre e Ajuda</a>
+                <a class="item" ng-click="Logout()" menu-close=""><i class="icon ion-android-exit"></i> Logout</a>
+            </ul>
+            <!--</ion-list>-->
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

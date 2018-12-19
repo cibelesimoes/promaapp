@@ -1,0 +1,58 @@
+<ion-view view-title="Todos os Posts" hide-back-button="true" data-ng-app="starter.home">
+   <link href="home/home.css" rel="stylesheet">
+    <ion-content class="padding" ng-controller="HomeCtrl">
+       
+	<ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="listarPostsWebService()">
+    </ion-refresher>
+
+    <div class="master">
+            <div class="item item-input">
+                <input type="search" ng-model="procuraPor" placeholder="busque alguma coisa... " name="txtSearch" id="valorbusca" >
+                <button class="button button-assertive" >
+                    <i class="icon ion-search"></i> 
+                </button>
+            </div>
+            <br>
+            <div class="item tabs">
+                <button class="button button-full" id="button-ord-nome" ng-click="Order('0')">
+                    Por nome<i class="icon ion-android-arrow-dropdown"></i>
+                </button> <p>.</p>
+                <button class="button button-full" id="button-ord-preco" ng-click="Order('1')">
+                    Por preço<i class="icon ion-android-arrow-dropdown"></i>
+                </button> <p>.</p>
+                <button class="button button-full" id="button-ord-recente" ng-click="Order('2')">
+                    Mais recente <i class="icon ion-android-arrow-dropdown"></i>
+                </button>
+            </div>
+            <br>
+
+
+        <div class="list" ng-repeat="post in allPosts | filter:procuraPor" ng-model="datevalue">
+            
+            <div class="item item-avatar">
+                        <img class="full-image" ng-src="{{(post.username.endsWith('a') && 'img/icecream.png') || (post.username.endsWith('e') && 'img/cake.png') || (post.username.endsWith('i') && 'img/lollipop.png') || (post.username.endsWith('o') && 'img/summer.png') || (post.username.endsWith('u') && 'img/dome.png')  || 'img/profile.png'}}">
+                        <h2>@{{post.username}}</h2>
+                        <p class="ion-ios-clock-outline"> Postado em {{ post.posted | date: 'dd/MM/yyyy' }}</p>
+                        <!--<span am-time-ago="post.posted"></span>-->
+            </div>
+            <div class="item item-body">
+                <p>#{{post.productname}} #{{post.productprice}} #{{post.message}}
+                <img class="full-image" ng-src="{{post.picture}}"
+                    onerror="angular.element(this).scope().imgError()">
+                <a id="qtdelikes_{{post.id}}">{{post.qtde_likes}} Likes</a>
+                </p>
+            </div>
+            <div class="item tabs">
+                <button class="button button-full" id="button-like" ng-init="postlike = {id_post: post.id, likes:1, username:'', liked:''}"  ng-click="saveLike(postlike,post)">
+                    Like <i class="icon ion-thumbsup"></i>
+                </button> <p>.</p>
+                <button class="button button-full button-royal" id="button-report" ng-init="postreport = {id_post: post.id, reports:1, username:'', reported:''}"  ng-click="saveReport(postreport)">
+                    Reportar <i class="icon ion-thumbsdown"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

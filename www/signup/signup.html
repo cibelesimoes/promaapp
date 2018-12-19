@@ -1,0 +1,33 @@
+<ion-view view-title="SignUp" hide-back-button="false">
+   <link href="signup/signup.css" rel="stylesheet">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    
+    <ion-content class="padding">
+        <form class="list" name="formSignUp" ng-submit="Signup(formSignUp.$valid,user)" novalidate>
+            <div>
+                <label class="item item-input" id="lblName">
+                    <input name="nameuser" type="text" ng-model="user.name" placeholder="Primeiro Nome*" required>
+                </label>
+            </div>
+            <div>
+                <label class="item item-input" id="lblEmail">
+                    <input type="email" name="useremail" ng-model="user.email" placeholder="Email*" required>
+                </label>
+                <span ng-class="error" class="error" ng-show="formSignUp.useremail.$error.email">E-mail é inválido</span>
+            </div>
+            <label class="item item-input" id="lblUserName">
+                <input type="text" ng-model="user.username" placeholder="Username*" required>
+            </label>
+            <label class="item item-input" id="lblPassword">
+                <input type="password" ng-model="user.password" placeholder="Senha*" required>
+            </label>
+            <button type="submit" class="button button-assertive button-full">
+                Sign Up
+            </button>
+            <button class="button button-royal button-full" ng-click="signIn()">
+                Login
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

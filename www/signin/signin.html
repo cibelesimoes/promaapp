@@ -1,0 +1,26 @@
+<ion-view view-title="Login">
+    <ion-content scroll="true" class="padding">
+        <h1 class="title text-center">{{mensagem}}</h1>
+        <!--<div class="list">
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password">
+            </label>
+        </div>-->
+        <form class="list" name="formSignIn" ng-submit="Logar(user)">
+            <label class="item item-input" id="lblEmail">
+                <input type="email" ng-model="user.email" placeholder="Email" ng-required="true">
+            </label>
+            <label class="item item-input" id="lblPassword">
+                <input type="password" ng-model="user.password" placeholder="Password" ng-required="true">
+            </label>
+
+            <button type="submit" class="button button-assertive button-full">Login</button>
+            <button class="button button-royal button-full" ng-click="Registrar()">Registrar</button>
+        </form>
+    </ion-content>
+</ion-view>

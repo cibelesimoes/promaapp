@@ -1,0 +1,36 @@
+.alerta {
+  color: red;
+}
+
+.error{
+    text-align: left;
+    color: darkred;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.list{
+    text-align: left;
+}
+
+.list, .item{
+    background-color: #ffffff;
+}
+
+input.input-box, textarea{
+    background-color: #b3b3b3;
+}
+
+.img-circle {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.desabilitado {
+    background: #EEE; 
+    cursor: not-allowed; 
+    color: #777;
+}

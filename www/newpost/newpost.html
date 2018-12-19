@@ -1,0 +1,38 @@
+<ion-view view-title="Novo Post" hide-back-button="true">
+   <link href="newpost/newpost.css" rel="stylesheet">
+   
+   <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-content class="padding">
+      
+      
+    <div class="list" > 
+        <div>
+            <label  class="item item-input campo1" id="lblProductName">
+                <input name="productname" type="text" ng-model="post.productname" placeholder="Nome do produto">
+            </label>
+            <label class="item item-input" id="lblProductPrice">
+                <input name="productprice" type="number" step="0,01" ng-model="post.productprice" placeholder="R$ 0.00">
+            </label>
+            </div>
+        <label class="item item-input item-stacked-label">
+          <textarea type="text" placeholder="Achou alguma promoção? Conta pra gente :)"
+                ng-model="post.message"></textarea>
+        </label>
+        <div class="item">
+          <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+          <img ng-show="imgURI === undefined" ng-src="img/100x70.png">
+          
+          <button class="button icon ion-camera" ng-click="takePicture(1)"></button>
+          <button class="button icon ion-images" ng-click="takePicture(2)"></button> 
+          <button class="button icon ion-ios-location" ng-click="getCurrentPosition()"></button>  
+        </div>
+      </div>
+      <div class="">
+              <button class="button button-assertive button-full" ng-click="savePost(post)">
+                Postar <i class="icon ion-paper-airplane"></i>
+              </button>
+      </div>
+
+    </ion-content>
+</ion-view>

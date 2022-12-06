@@ -1,21 +1,21 @@
 # promaApp
 
 
-Aplicação que aprensentei na PUC Minas em 2016
+AplicaÃ§Ã£o que aprensentei na PUC Minas em 2016
 
-##Objetivo
+## Objetivo
 
-Desenvolver uma rede social para compartilhamento de preços de produtos do setor alimentício.
+Desenvolver uma rede social para compartilhamento de preÃ§os de produtos do setor alimentÃ­cio.
 
-##Recursos
+## Recursos
 
-A aplicação foi desenvolvida em Ionic 3 e AngularJS, no ambiente Linux. Consome um WS desenvolvido em PHP eas informações são armazenadas em um banco MySQL.
+A aplicaÃ§Ã£o foi desenvolvida em Ionic 3 e AngularJS, no ambiente Linux. Consome um WS desenvolvido em PHP eas informaÃ§Ãµes sÃ£o armazenadas em um banco MySQL.
 
-##Testes
+## Testes
 
-Foram feitos testes de usabilidade com usuários entre 17 a 50 anos, no intuito de medir a facilidade na execução das funcionalidades da aplicação.
+Foram feitos testes de usabilidade com usuÃ¡rios entre 17 a 50 anos, no intuito de medir a facilidade na execuÃ§Ã£o das funcionalidades da aplicaÃ§Ã£o.
 
-##Resultados
+## Resultados
 
 
-Ao executar as funcionalidades da aplicação tais como: postar preços, fotografar, curtir post, sign in e sign up, pôde­se afirmar que a idade dos usuários exerceu influência de 75,56% do experimento/desenvolvimento.
+Ao executar as funcionalidades da aplicaÃ§Ã£o tais como: postar preÃ§os, fotografar, curtir post, sign in e sign up, pÃ´deÂ­se afirmar que a idade dos usuÃ¡rios exerceu influÃªncia de 75,56% do experimento/desenvolvimento.
